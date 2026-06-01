@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* PHONE DESIGN */
+.phone-container {
+    width: 375px;
+    height: 812px;
+    background-color: #000000;
+    border-radius: 40px;
+    border: 8px solid #333333;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background-color: #696363;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 10;
+}
+
+/* CHAT INTERFACE */
+.chat-header {
+    background-color: #1a1a1a;
+    padding: 40px 20px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    z-index: 5;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #DDFB74; /* Neon green accent */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.contact-info h2 { font-size: 16px; font-weight: 600; letter-spacing: 0.5px; }
+.contact-info p { font-size: 12px; color: #DDFB74; margin-top: 2px; }
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #696363;
+    background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+}
+
+.chat-body::-webkit-scrollbar { display: none; }
+
+.chat-footer {
+    background-color: #1a1a1a;
+    padding: 15px 20px 25px;
+    border-top: 1px solid #333;
+}
+
+.mock-input {
+    width: 100%;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    padding: 12px 15px;
+    color: #888;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.send-btn {
+    background: none; border: none;
+    color: #DDFB74; font-weight: 600; cursor: pointer;
+}
+
+/* MESSAGE BUBBLES */
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Musician's Messages (Right side) */
+.msg-musician {
+    align-self: flex-end;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+/* Janus's Messages (Left side) */
+.msg-janus {
+    align-self: flex-start;
+    background-color: #1a2612;
+    border: 1px solid #DDFB74;
+    color: #DDFB74;
+    border-bottom-left-radius: 4px;
+}
+
+/* OVERLAY */
+.start-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 20; backdrop-filter: blur(5px);
+}
+
+.start-btn {
+    background-color: #DDFB74; color: #000; border: none;
+    padding: 15px 30px; border-radius: 30px; font-size: 16px;
+    font-weight: bold; cursor: pointer;
+    box-shadow: 0 0 20px rgba(221, 251, 116, 0.4);
+    transition: transform 0.2s;
+}
+
+.start-btn:hover { transform: scale(1.05); }
+
